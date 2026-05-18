@@ -1,9 +1,9 @@
 <script src="https://julesjacobs.com/misc/oxcaml/playground/oxcaml-embed.js"></script>
 
-<script type="text/plain" class="oxcaml" data-oxcaml-run-trigger="manual">
+<oxcaml data-oxcaml-run-trigger="manual">
 let () = print_endline "Hello from exercise block"
-</script>
+</oxcaml>
 
-<script type="text/plain" class="oxcaml" data-oxcaml-run-trigger="manual-after-initial" data-oxcaml-class="solution">
+<oxcaml data-oxcaml-run-trigger="manual-after-initial">
 let () = print_endline "Hello from solution block"
-</script>
+</oxcaml>
