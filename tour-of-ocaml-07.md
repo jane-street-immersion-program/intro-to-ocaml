@@ -179,6 +179,8 @@ between them. That's because the double semicolon is required only to
 tell the toplevel to process the input, not to separate two declarations
 
 <oxcaml utop>
+open Core
+
 type point2d = { x : float; y : float }
 type circle_desc  = { center: point2d; radius: float }
 type rect_desc    = { lower_left: point2d; width: float; height: float }

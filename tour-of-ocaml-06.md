@@ -41,6 +41,8 @@ type `(string * string) option`, returning `None` when no character was found
 to split on.
 
 <oxcaml utop>
+open Core
+
 let downcase_extension filename =
   match String.rsplit2 filename ~on:'.' with
   | None -> filename

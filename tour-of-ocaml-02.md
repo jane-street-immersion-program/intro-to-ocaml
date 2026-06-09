@@ -51,6 +51,8 @@ Here's something a little more complicated. We can compute the list of the
 lengths of each language as follows:
 
 <oxcaml utop>
+open Core
+
 let languages = ["OCaml";"Perl";"C"]
 let language_name_lengths = List.map languages ~f:String.length
 </oxcaml>
@@ -65,6 +67,8 @@ change the order in which arguments are presented to a function without changing
 behavior, as you can see here:
 
 <oxcaml utop>
+open Core
+
 let languages = ["OCaml";"Perl";"C"]
 let language_name_lengths = List.map ~f:String.length languages
 </oxcaml>
