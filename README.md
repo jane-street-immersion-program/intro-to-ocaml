@@ -1,8 +1,8 @@
-OCaml bootcamp part 1 gives an overview of OCaml by walking through a series of
+This tutorial gives an overview of OCaml by walking through a series of
 small examples that cover most of the major features of the language. This should provide
 a sense of what OCaml can do, without getting too deep into any one topic.
 
-Each page in part 1 ends with one or more exercises
+Each page ends with one or more exercises
 that you'll complete using in-browser OCaml playgrounds.
 As you work through an exercise, type your solution into the playground editor and then
 hit ***Run*** (or `Ctrl`+`Enter`) to type-check and evaluate it.
@@ -17,7 +17,7 @@ You can reset an editor back to its initial state with the
 The playgrounds imitate `utop`, the OCaml interactive toplevel that runs in a terminal.
 It's worth trying out `utop` in the terminal at least once,
 since it can be a handy way to test out small snippets of OCaml code.
-So before starting part 1.0, start up a terminal and run the `utop` command.
+So before starting, start up a terminal and run the `utop` command.
 Then proceed to [this page](./tour-of-ocaml-00.md) to get started.
 
 ## List of Concepts
