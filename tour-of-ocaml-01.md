@@ -2,7 +2,7 @@
 
 **A Note About Solutions**
 
-At the start of each of these part 1 pages, we'll have the solutions to the exercises from
+At the start of each of these pages, we'll have the solutions to the exercises from
 the previous page.  We'll sometimes have commentary about other features of OCaml that
 could apply to the solutions.  We put exercises and solutions on separate pages to
 encourage you to make a serious attempt at your own solution before looking at ours.

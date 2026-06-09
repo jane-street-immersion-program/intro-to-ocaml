@@ -22,7 +22,7 @@ Then proceed to [this page](./tour-of-ocaml-00.md) to get started.
 
 ## List of Concepts
 
-For reference, here's a summary of the concepts introduced on each section of part 1:
+For reference, here's a summary of the concepts introduced in each section:
 
 - [Part 0](./tour-of-ocaml-00.md)
   - numerical calculations
