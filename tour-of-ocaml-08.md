@@ -223,7 +223,10 @@ List.take : 'a list -> int -> 'a list
 List.concat : 'a list list -> 'a list
 ```
 
-~~~spoiler {title: "Answers"}
+<details>
+
+<summary>Answers</summary>
+
 - `mapi` is like `map`. Additionally, it passes in the index of each element as the first
   argument to the mapped function.
 - `filter_map t ~f` applies `f` to every `x` in `t`. The result contains every `y` for
@@ -237,7 +240,8 @@ List.concat : 'a list list -> 'a list
   l n = fst (split_n l n)`.
 - `concat` concatenates a nested list. The elements of the inner lists are concatenated
   together in order to give the result.
-~~~
+
+</details>
 
 Write a function `interleave` that takes two lists, `list1` and `list2`, and returns a
 single list with elements of `list1` and `list2` interleaved. Assume that input lists have
