@@ -223,7 +223,7 @@ List.take : 'a list -> int -> 'a list
 List.concat : 'a list list -> 'a list
 ```
 
-<details>
+<details markdown="1">
 
 <summary>Answers</summary>
 
