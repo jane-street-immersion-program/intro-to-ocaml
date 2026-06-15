@@ -1,0 +1,16 @@
+(library
+ (name main)
+ (libraries core)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane)))
+
+;; Relax a few warnings so half-written code typed live during the lecture still
+;; builds (unused vars/values, etc.).
+
+(env
+ (dev
+  (flags
+   (:standard -w -20 -w -26 -w -27 -w -32 -w -34 -w -37 -w -39)))
+ (release
+  (flags (:standard))))
