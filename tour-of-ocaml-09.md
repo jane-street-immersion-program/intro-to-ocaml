@@ -254,7 +254,7 @@ provides more details.
 
 
    (* Tests: *)
-   let ulysses = { first_name = "Ulysses"; last_name = "Grant"; age = 50; email = None}
+   let ulysses = { first_name = "Ulysses"; last_name = "Grant"; age = 50; email = None} ;;
    birthday ulysses
    let () = assert (ulysses.age = 51)
    </oxcaml>
