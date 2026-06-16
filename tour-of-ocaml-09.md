@@ -232,13 +232,13 @@ provides more details.
 
 
    (* Tests: *)
-   let input_array = [||]
+   let input_array = [||] ;;
    cumulative_sum input_array
    let () = assert (Array.equal Int.equal input_array [||])
-   let input_array = [|1|]
+   let input_array = [|1|] ;;
    cumulative_sum input_array
    let () = assert (Array.equal Int.equal input_array [|1|])
-   let input_array = [|1; 2; 3; 4|]
+   let input_array = [|1; 2; 3; 4|] ;;
    cumulative_sum input_array
    let () = assert (Array.equal Int.equal input_array [|1; 3; 6; 10|])
    </oxcaml>
