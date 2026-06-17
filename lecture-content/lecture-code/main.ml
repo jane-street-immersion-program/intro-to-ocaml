@@ -18,6 +18,7 @@ type order =
 (* defining a function with let FUNCTION_NAME ARG1 ARG2 ... = FUNCTION_BODY *)
 let notional order = order.price *. Float.of_int order.size
 let list_of_ints = [ 1; 2; 3 ]
+let sum_of_squares = List.sum (module Int) list_of_ints ~f:(fun i -> i * i)
 
 let book =
   [ { side = Buy; price = 100.5; size = 10 }
@@ -26,6 +27,7 @@ let book =
   ]
 ;;
 
+let sum_of_sizes = List.sum (module Float) book ~f:(fun order -> order.price)
 let bigger_book = { side = Sell; price = 101.5; size = 3 } :: book
 
 (* List.map : 'a list -> ~f:('a -> 'b) -> 'b list 'a (tick-a or alpha) is a
@@ -104,11 +106,29 @@ let mid_price2 (market : Market.t) : (float, string) Result.t =
 let%expect_test "demo" =
   print_s [%message (book : order list)];
   describe 123.4;
+  print_endline [%string "%{sum_of_squares#Int}"];
   [%expect
     {|
     (book
      (((side Buy) (price 100.5) (size 10)) ((side Sell) (price 101.5) (size 5))
       ((side Buy) (price 100) (size 7))))
     order at 123.4
+    14
     |}]
+;;
+
+let mid4 (t : Market.t) =
+  match t.best_bid, t.best_ask with
+  | None, None -> Or_error.error_string "no bid or ask"
+  | None, _ -> Or_error.error_string "no bid"
+  | _, None -> Or_error.error_string "no ask"
+  | Some bid, Some ask -> Ok ((bid +. ask) /. 2.)
+;;
+
+let bid_ask_spread (t : Market.t) =
+  match t.best_bid, t.best_ask with
+  | None, None -> Or_error.error_string "no bid or ask"
+  | None, _ -> Or_error.error_string "no bid"
+  | _, None -> Or_error.error_string "no ask"
+  | Some bid, Some ask -> Ok (ask -. bid)
 ;;
